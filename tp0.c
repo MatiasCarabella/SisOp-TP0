@@ -21,23 +21,31 @@ int main(void)
 	logger = iniciar_logger();
 
 	//Loggear "soy un log"
+	log_info(logger, "Soy un log");
+
 
 	config = leer_config();
 
 	//asignar valor de config a la variable valor
+	valor = config_get_string_value(config, "CLAVE");
 
 	//Loggear valor de config
+	log_info(logger, valor);
 
 	leer_consola(logger);
+
 
 
 	/*---------------------------------------------------PARTE 3-------------------------------------------------------------*/
 
 	//antes de continuar, tenemos que asegurarnos que el servidor esté corriendo porque lo necesitaremos para lo que sigue.
-
+	ip = config_get_string_value(config, "IP");
+	puerto = config_get_string_value(config, "PUERTO");
 	//crear conexion
+	conexion = crear_conexion(ip, puerto);
 
 	//enviar CLAVE al servirdor
+	enviar_mensaje(valor, conexion);
 
 	paquete(conexion);
 
@@ -46,12 +54,12 @@ int main(void)
 
 t_log* iniciar_logger(void)
 {
-
+	return log_create("tp0.log", "TP0", 1, LOG_LEVEL_INFO);
 }
 
 t_config* leer_config(void)
 {
-
+	return config_create("tp0.config");
 }
 
 void leer_consola(t_log* logger)
@@ -59,9 +67,13 @@ void leer_consola(t_log* logger)
 	char* leido;
 
 	//El primero te lo dejo de yapa
-	leido = readline(">");
-
-
+	leido = readline("Ingrese valor a logear en 'tp0.log': ");
+	while(strcmp("", leido) != 0){
+		log_info(logger, leido);
+		free(leido);
+		leido = readline("Ingrese valor a logear en 'tp0.log': ");
+	}
+	free(leido);
 }
 
 void paquete(int conexion)
@@ -71,10 +83,23 @@ void paquete(int conexion)
 	char* leido;
 	t_paquete* paquete;
 
+	paquete = crear_super_paquete();
 
+	leido = readline("Ingrese valor a logear en el SERVIDOR: ");
+	while(strcmp("", leido) != 0){
+		agregar_a_paquete(paquete,leido, strlen(leido)+1);
+		free(leido);
+		leido = readline("Ingrese valor a logear en el SERVIDOR: ");
+	}
+	free(leido);
+	enviar_paquete(paquete,conexion);
+	eliminar_paquete(paquete);
 }
 
 void terminar_programa(int conexion, t_log* logger, t_config* config)
 {
 	//Y por ultimo, para cerrar, hay que liberar lo que utilizamos (conexion, log y config) con las funciones de las commons y del TP mencionadas en el enunciado
+	liberar_conexion(conexion);
+	log_destroy(logger);
+	config_destroy(config);
 }

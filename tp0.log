@@ -1,0 +1,38 @@
+[INFO] 21:57:13:854 TP0/(4541:4541): Soy un log
+[INFO] 21:57:13:857 TP0/(4541:4541): Hola, soy un valor
+[INFO] 21:57:21:102 TP0/(4561:4561): Soy un log
+[INFO] 21:57:21:106 TP0/(4561:4561): Hola, soy un valor
+[INFO] 22:52:09:722 TP0/(5537:5537): Soy un log
+[INFO] 22:52:09:723 TP0/(5537:5537): Hola, soy un valor
+[INFO] 22:52:43:225 TP0/(5553:5553): Soy un log
+[INFO] 22:52:43:226 TP0/(5553:5553): Hola, soy un valor
+[INFO] 22:55:23:158 TP0/(5635:5635): Soy un log
+[INFO] 22:55:23:158 TP0/(5635:5635): Hola, soy un valor
+[INFO] 22:55:39:893 TP0/(5635:5635): ESTO DEBERIA LOGEARSE
+[INFO] 23:02:16:009 TP0/(5901:5901): Soy un log
+[INFO] 23:02:16:010 TP0/(5901:5901): Hola, soy un valor
+[INFO] 23:02:20:327 TP0/(5901:5901): holis
+[INFO] 23:02:27:699 TP0/(5901:5901): holis de nuevo
+[INFO] 23:02:30:350 TP0/(5901:5901): chau
+[INFO] 23:04:25:193 TP0/(5977:5977): Soy un log
+[INFO] 23:04:25:196 TP0/(5977:5977): Hola, soy un valor
+[INFO] 23:04:27:713 TP0/(5977:5977): hola
+[INFO] 23:07:32:127 TP0/(6085:6085): Soy un log
+[INFO] 23:07:32:133 TP0/(6085:6085): Hola, soy un valor
+[INFO] 23:15:38:232 TP0/(6423:6423): Soy un log
+[INFO] 23:15:38:232 TP0/(6423:6423): Hola, soy un valor
+[INFO] 23:15:42:268 TP0/(6423:6423): holis
+[INFO] 23:16:03:735 TP0/(6441:6441): Soy un log
+[INFO] 23:16:03:737 TP0/(6441:6441): Hola, soy un valor
+[INFO] 23:16:05:868 TP0/(6441:6441): hola
+[INFO] 23:19:15:950 TP0/(6542:6542): Soy un log
+[INFO] 23:19:15:951 TP0/(6542:6542): Hola, soy un valor
+[INFO] 23:19:17:867 TP0/(6542:6542): hola
+[INFO] 23:27:42:364 TP0/(6756:6756): Soy un log
+[INFO] 23:27:42:364 TP0/(6756:6756): Hola, soy un valor
+[INFO] 23:27:57:912 TP0/(6774:6774): Soy un log
+[INFO] 23:27:57:912 TP0/(6774:6774): Hola, soy un valor
+[INFO] 23:28:03:922 TP0/(6774:6774): archivo log
+[INFO] 23:34:31:896 TP0/(6899:6899): Soy un log
+[INFO] 23:34:52:537 TP0/(6899:6899): Hola, soy un valor
+[INFO] 23:34:59:863 TP0/(6899:6899): holis
